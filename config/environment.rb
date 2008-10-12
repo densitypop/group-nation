@@ -28,6 +28,9 @@ Rails::Initializer.run do |config|
   config.gem 'vlad'
   config.gem 'rspec', :lib => 'spec'
   config.gem "rspec-rails", :lib => "spec"
+  # to install mysql gem use gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
+  #config.gem 'mysql'
+  
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
   # :all can be used as a placeholder for all plugins not explicitly named
