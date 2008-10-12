@@ -28,6 +28,7 @@ Rails::Initializer.run do |config|
   config.gem 'vlad'
   config.gem 'rspec', :lib => 'spec'
   config.gem "rspec-rails", :lib => "spec"
+  config.gem 'haml'
   # to install mysql gem use gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
   #config.gem 'mysql'
   
