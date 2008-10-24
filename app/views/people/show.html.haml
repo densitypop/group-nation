@@ -1,0 +1,13 @@
+%p
+  %strong First name:
+  =h @person.first_name
+%p
+  %strong Last name:
+  =h @person.last_name
+%p
+  %strong Email:
+  =h @person.email
+
+= link_to 'Edit', edit_object_url
+|
+= link_to 'Back', collection_url

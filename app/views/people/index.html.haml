@@ -1,0 +1,20 @@
+%h1 Listing people
+
+%table
+  %tr
+    %th First name
+    %th Last name
+    %th Email
+  - @people.each do |person|
+    %tr
+      %td= h person.first_name
+      %td= h person.last_name
+      %td= h person.email
+        
+      %td= link_to 'Show', object_url(person)
+      %td= link_to 'Edit', edit_object_url(person)
+      %td= link_to 'Destroy', object_url(person), :confirm => 'Are you sure?', :method => :delete
+
+%br/
+
+=link_to 'New person', new_object_url
