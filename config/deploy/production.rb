@@ -2,37 +2,37 @@
 #	Application
 #############################################################
 
-set :application, "meetinbetween"
-set :deploy_to, "/var/www/apps/meetinbetween"
+#set :application, "meetinbetween"
+#set :deploy_to, "/var/www/apps/meetinbetween"
 
 #############################################################
 #	Settings
 #############################################################
 
-default_run_options[:pty] = true
-ssh_options[:forward_agent] = true
-set :use_sudo, true
-set :scm_verbose, true
-set :rails_env, "production" 
+#default_run_options[:pty] = true
+#ssh_options[:forward_agent] = true
+#set :use_sudo, true
+#set :scm_verbose, true
+#set :rails_env, "production" 
 
 #############################################################
 #	Servers
 #############################################################
 
-set :user, "joe"
-set :domain, "72.14.181.27"
-server domain, :app, :web
-role :db, domain, :primary => true
+#set :user, "joe"
+#set :domain, "72.14.181.27"
+#server domain, :app, :web
+#role :db, domain, :primary => true
 
 #############################################################
 #	Git
 #############################################################
 
-set :scm, :git
-set :branch, "master"
-set :scm_user, 'faithfulgeek'
-set :repository, "git@github.com:railsrumble/great-lakes-geeks.git"
-set :deploy_via, :remote_cache
+#set :scm, :git
+#set :branch, "master"
+#set :scm_user, 'faithfulgeek'
+#set :repository, "git@github.com:railsrumble/great-lakes-geeks.git"
+#set :deploy_via, :remote_cache
 
 #############################################################
 #	Passenger
