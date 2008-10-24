@@ -1,0 +1,16 @@
+one:
+  id: 1
+  name: MyString
+  person_id: 1
+  city: MyString
+  state: MyString
+  zip: MyString
+  active: false
+two:
+  id: 2
+  name: MyString
+  person_id: 1
+  city: MyString
+  state: MyString
+  zip: MyString
+  active: false

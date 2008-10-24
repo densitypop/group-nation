@@ -1,0 +1,22 @@
+%p
+  %strong Name:
+  =h @group.name
+%p
+  %strong Person:
+  =h @group.person_id
+%p
+  %strong City:
+  =h @group.city
+%p
+  %strong State:
+  =h @group.state
+%p
+  %strong Zip:
+  =h @group.zip
+%p
+  %strong Active:
+  =h @group.active
+
+= link_to 'Edit', edit_object_url
+|
+= link_to 'Back', collection_url

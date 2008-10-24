@@ -1,0 +1,26 @@
+%h1 Listing groups
+
+%table
+  %tr
+    %th Name
+    %th Person
+    %th City
+    %th State
+    %th Zip
+    %th Active
+  - @groups.each do |group|
+    %tr
+      %td= h group.name
+      %td= h group.person_id
+      %td= h group.city
+      %td= h group.state
+      %td= h group.zip
+      %td= h group.active
+        
+      %td= link_to 'Show', object_url(group)
+      %td= link_to 'Edit', edit_object_url(group)
+      %td= link_to 'Destroy', object_url(group), :confirm => 'Are you sure?', :method => :delete
+
+%br/
+
+=link_to 'New group', new_object_url
