@@ -5,7 +5,7 @@
 # ENV['RAILS_ENV'] ||= 'production'
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.1.1' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.2.0' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -25,10 +25,7 @@ Rails::Initializer.run do |config|
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem 'vlad'
-  config.gem 'rspec', :lib => 'spec'
-  config.gem "rspec-rails", :lib => "spec"
-  config.gem 'haml'
+  config.gem 'haml', :sourch => 'http://gems.github.com'
   # to install mysql gem use gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
   #config.gem 'mysql'
   
