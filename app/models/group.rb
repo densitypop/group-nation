@@ -8,7 +8,7 @@ class Group < ActiveRecord::Base
 
   validates_format_of :zip, :with => /\d{5}/
 
-  belongs_to :organizer, :class_name => :person
+  belongs_to :organizer, :class_name => 'Person'
 
   has_permalink :name
 
