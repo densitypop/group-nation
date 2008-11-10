@@ -6,6 +6,13 @@ describe Group do
   end
 
   it "should be valid" do
+    @group.name = "Testing"
+    p = Person.create( { :first_name => 'Joe', :last_name => 'Tester' } )
+    p.save false
+    @group.organizer = p
+    @group.city = "Anytown"
+    @group.state = "OH"
+    @group.zip = 12345
     @group.should be_valid
   end
 end
