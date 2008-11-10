@@ -13,7 +13,7 @@ ActiveRecord::Schema.define(:version => 20081024014807) do
 
   create_table "groups", :force => true do |t|
     t.string   "name"
-    t.integer  "person_id"
+    t.integer  "organizer_id"
     t.string   "city"
     t.string   "state"
     t.string   "zip"
