@@ -33,15 +33,65 @@ describe GroupsController do
     end
   end
 
-  describe "handling GET /groups/1" do
+  describe "handling GET /groups.xml" do
+    
+    before(:each) do
+      @group = mock_model(Group, :to_xml => "XML")
+      Group.stub!(:find).and_return(@group)
+    end
+
+    def do_get
+      @request.env["HTTP_ACCEPT"] = "application/xml"
+      get :index
+    end
+
+    it "should be successful" do
+      do_get
+      response.should be_success
+    end
+
+    it "should render any elements found as XML" do
+      @group.should_receive(:to_xml).and_return("XML")
+      do_get
+      response.body.should == "XML"
+    end
+     
+  end
+
+  describe "handling GET /groups.json" do
+  
+    before(:each) do
+      @group = mock_model(Group, :to_json => "JSON")
+      Group.stub!( :find ).and_return(@group)
+    end
+
+    def do_get
+      @request.env["HTTP_ACCEPT"] = "application/json"
+      get :index
+    end
+
+    it "should be successful" do
+      do_get
+      response.should be_success
+    end
+
+    it "should render any elements found as JSON" do
+      @group.should_receive(:to_json).and_return("JSON")
+      do_get
+      response.body.should == "JSON"
+    end
+
+  end
+  
+  describe "handling GET /groups/testing" do
 
     before(:each) do
       @group = mock_model(Group)
-      Group.stub!(:find).and_return(@group)
+      Group.stub!(:find_by_permalink).and_return(@group)
     end
   
     def do_get
-      get :show, :id => "1"
+      get :show, :id => "testing"
     end
 
     it "should be successful" do
@@ -55,7 +105,7 @@ describe GroupsController do
     end
   
     it "should find the group requested" do
-      Group.should_receive(:find).with("1").and_return(@group)
+      Group.should_receive(:find_by_permalink).with("testing").and_return(@group)
       do_get
     end
   
@@ -63,6 +113,54 @@ describe GroupsController do
       do_get
       assigns[:group].should equal(@group)
     end
+
+  end
+
+  describe "handling GET /groups/testing.xml" do
+
+    before(:each) do
+      @group = mock_model(Group, :to_xml => "XML")
+      Group.stub!(:find_by_permalink).and_return(@group)
+    end
+
+    def do_get
+      request.env["HTTP_ACCEPT"] = "application/xml"
+      get :show, :id => "testing"
+    end
+
+    it "should be successful" do
+      do_get
+      response.should be_success
+    end
+
+    it "should find the group requested" do
+      Group.should_receive(:find_by_permalink).with("testing").and_return(@group)
+      do_get
+      response.should be_success
+      @group.should_not be_nil
+    end
+
+    it "should render found group as XML" do
+      Group.should_receive(:find_by_permalink).with("testing").and_return(@group)
+      do_get
+      response.body.should == "XML"
+    end
+
+  end
+
+  describe "handling GET /groups/not_found.xml 404" do
+
+    def do_get
+      request.env["HTTP_ACCEPT"] = "application/xml"
+      get :show, :id => "not_found"
+    end
+
+    it "should 404 if given group that doesn't exist" do
+      pending "Look up how to spec 404s"
+      do_get
+      response.code.should == "404"
+    end
+
   end
 
   describe "handling GET /groups/new" do
@@ -102,7 +200,7 @@ describe GroupsController do
     end
   end
 
-  describe "handling GET /groups/1/edit" do
+  describe "handling GET /groups/testing/edit" do
 
     before(:each) do
       @group = mock_model(Group)
@@ -110,7 +208,7 @@ describe GroupsController do
     end
   
     def do_get
-      get :edit, :id => "1"
+      get :edit, :id => "testing"
     end
 
     it "should be successful" do
@@ -173,12 +271,25 @@ describe GroupsController do
       end
       
     end
+
+    describe "with XML data" do
+      
+      it "should save Group when posted with XML data" do
+        pending "Figure out how to test POSTing with XML"
+      end
+
+      it "should return location of created resource" do
+        pending "How the hell do I test REST with rspec??"
+      end
+
+    end
+
   end
 
   describe "handling PUT /groups/1" do
 
     before(:each) do
-      @group = mock_model(Group, :to_param => "1")
+      @group = mock_model(Group, :to_param => "testing")
       Group.stub!(:find).and_return(@group)
     end
     
@@ -186,11 +297,11 @@ describe GroupsController do
 
       def do_put
         @group.should_receive(:update_attributes).and_return(true)
-        put :update, :id => "1"
+        put :update, :id => "testing"
       end
 
       it "should find the group requested" do
-        Group.should_receive(:find).with("1").and_return(@group)
+        Group.should_receive(:find_by_permalink).with("testing").and_return(@group)
         do_put
       end
 
@@ -206,7 +317,7 @@ describe GroupsController do
 
       it "should redirect to the group" do
         do_put
-        response.should redirect_to(group_url("1"))
+        response.should redirect_to(group_url("testing"))
       end
 
     end
@@ -226,7 +337,7 @@ describe GroupsController do
     end
   end
 
-  describe "handling DELETE /groups/1" do
+  describe "handling DELETE /groups/testing" do
 
     before(:each) do
       @group = mock_model(Group, :destroy => true)
@@ -234,11 +345,11 @@ describe GroupsController do
     end
   
     def do_delete
-      delete :destroy, :id => "1"
+      delete :destroy, :id => "testing"
     end
 
     it "should find the group requested" do
-      Group.should_receive(:find).with("1").and_return(@group)
+      Group.should_receive(:find_by_permalink).with("testing").and_return(@group)
       do_delete
     end
   
