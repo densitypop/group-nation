@@ -1,1 +1,18 @@
 /* Thanks Eric! */ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;outline: 0;font-weight: inherit;font-style: inherit;font-size: 100%;font-family: inherit;vertical-align: baseline;}:focus { outline: 0;} body { line-height: 1; color: black;background: white; } ol, ul { list-style: none; } table { border-collapse: separate;border-spacing: 0; } caption, th, td { text-align: left; font-weight: normal; } blockquote:before, blockquote:after, q:before, q:after { content: ""; } blockquote, q { quotes: "" ""; }
+
+/** === COLOR SCHEME ===
+ *  { Background - Used across custom sites, so stay as nuetral as possible with white }
+ *  White: 				#fff
+ * 
+ *  { Base Colors - Shades of Blue and Green for base colors}
+ *  Grass Green:		#88c383
+ *  Deep Forest Green: 	#315e37 
+ *  Light Forest Green:	#457448
+ *  
+ *  Light Sky Blue:		#88bbc2
+ *  Deep Sky Blue:		#4586a6
+ *  
+ *  { Accent Color - Red contrasts blue and green }
+ *  Apple Red: 			#A60f42
+ ** === END COLOR SCHEME ===
+ */
