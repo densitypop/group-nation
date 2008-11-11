@@ -13,6 +13,47 @@
  *  Deep Sky Blue:		#4586a6
  *  
  *  { Accent Color - Red contrasts blue and green }
- *  Apple Red: 			#A60f42
+ *  Apple Red: 			#a60f42
  ** === END COLOR SCHEME ===
  */
+
+body 
+{ 
+	text-align:center; 
+	font-family: Helvetica, Arial, "MS Trebuchet", sans-serif;
+	font-size:67.5%;
+}
+
+div#container 
+{ 
+	margin:1em auto; 
+	text-align:left; 
+	width:960px; 
+	padding:2em;
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: georgia, times, serif;}
+
+h1 
+{
+	font-size:2.5em;
+	color:#a60f42;
+	margin-bottom:0.5em;
+}
+
+p
+{
+	font-size:1.2em;
+}
+
+table
+{
+	width:100%;
+	font-size:1.2em;
+}
+
+table th
+{
+	font-weight:bold;
+	border-bottom:1px solid #333;
+}
