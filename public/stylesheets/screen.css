@@ -44,6 +44,8 @@ h1
 p
 {
 	font-size:1.2em;
+	margin-bottom:1em;
+	line-height:1.5em;
 }
 
 table
@@ -56,4 +58,12 @@ table th
 {
 	font-weight:bold;
 	border-bottom:1px solid #333;
+}
+
+label
+{
+	display:block;
+	font-weight:bold;
+	text-transform:uppercase;
+	margin-top:1em;
 }
