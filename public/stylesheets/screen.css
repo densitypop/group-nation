@@ -1,19 +1,19 @@
 /* Thanks Eric! */ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;outline: 0;font-weight: inherit;font-style: inherit;font-size: 100%;font-family: inherit;vertical-align: baseline;}:focus { outline: 0;} body { line-height: 1; color: black;background: white; } ol, ul { list-style: none; } table { border-collapse: separate;border-spacing: 0; } caption, th, td { text-align: left; font-weight: normal; } blockquote:before, blockquote:after, q:before, q:after { content: ""; } blockquote, q { quotes: "" ""; }
 
-body 
-{ 
+body
+{
   background:url(/images/bg.gif) repeat-x #feffd1;
-	text-align:center; 
-	font-family: Helvetica, Arial, "MS Trebuchet", sans-serif;
-	font-size:67.5%;
+  text-align:center;
+  font-family: Helvetica, Arial, "MS Trebuchet", sans-serif;
+  font-size:67.5%;
 }
 
-div#container 
-{ 
-	margin:1em auto; 
-	text-align:left; 
-	width:960px; 
-	padding:2em;
+div#container
+{
+  margin:1em auto;
+  text-align:left;
+  width:960px;
+  padding:2em;
 }
 
 ul#mainnav
@@ -63,38 +63,38 @@ h1 span
 
 p
 {
-	font-size:1.2em;
-	margin-bottom:1em;
-	line-height:1.5em;
+  font-size:1.2em;
+  margin-bottom:1em;
+  line-height:1.5em;
 }
 
 table
 {
-	width:100%;
-	font-size:1.2em;
+  width:100%;
+  font-size:1.2em;
 }
 
 table th
 {
-	font-weight:bold;
-	border-bottom:1px solid #333;
+  font-weight:bold;
+  border-bottom:1px solid #333;
 }
 
 label
 {
-	display:block;
-	font-weight:bold;
-	text-transform:uppercase;
-	margin-top:1em;
+  display:block;
+  font-weight:bold;
+  text-transform:uppercase;
+  margin-top:1em;
 }
 
 input[type=text]
 {
-	padding:3px;
-	font-size:1.2em;
+  padding:3px;
+  font-size:1.2em;
 }
 
 input[type=submit]
 {
-	font-size:1.6em;
+  font-size:1.6em;
 }
