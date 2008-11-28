@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group>
+  <active type="boolean" nil="true"></active>
+  <city>Cleveland</city>
+  <created-at type="datetime">2008-11-10T23:29:56Z</created-at>
+  <id type="integer">1</id>
+  <name>Joe's Awesome Group</name>
+  <organizer-id type="integer">1</organizer-id>
+  <permalink>testing</permalink>
+  <state>OH</state>
+  <updated-at type="datetime">2008-11-10T23:57:13Z</updated-at>
+  <zip>44126</zip>
+</group>
