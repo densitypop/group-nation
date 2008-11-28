@@ -8,4 +8,8 @@
     %link{ :href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css" }/
   %body
     #container
+      %ul#mainnav
+        %li= link_to "Dashboard"
+        %li= link_to "Find a Group"
+        %li= link_to "Account"
       = yield
