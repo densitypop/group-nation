@@ -25,8 +25,8 @@ Rails::Initializer.run do |config|
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem 'nex3-haml', :source => 'http://gems.github.com'
-  config.gem 'sevenwire-forgery', :source => 'http://gems.github.com'
+  config.gem 'haml', :source => 'http://gems.github.com'
+  config.gem 'sevenwire-forgery', :lib => 'forgery', :source => 'http://gems.github.com'
   # to install mysql gem use gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
   #config.gem 'mysql'
   
