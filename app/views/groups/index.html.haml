@@ -1,26 +1,13 @@
 %h1 Listing groups
 
-%table
+%table.DataList
   %tr
-    %th Name
-    %th Person
-    %th City
-    %th State
-    %th Zip
-    %th Active
+    %th.first Name
+    %th Organized By
+    %th Location
   - @groups.each do |group|
-    %tr
-      %td= h group.name
-      %td= h group.organizer_id
-      %td= h group.city
-      %td= h group.state
-      %td= h group.zip
-      %td= h group.active
-        
-      %td= link_to 'Show', object_url(group)
-      %td= link_to 'Edit', edit_object_url(group)
-      %td= link_to 'Destroy', object_url(group), :confirm => 'Are you sure?', :method => :delete
-
-%br/
-
-=link_to 'New group', new_object_url
+    %tr{:class => cycle('even','odd') }
+      %td.first= link_to group.name, object_url(group)
+      %td= h "#{group.organizer.first_name} #{group.organizer.last_name}"
+      %td= h "#{group.city}, #{group.state}"
+%p= link_to 'New group', new_object_url

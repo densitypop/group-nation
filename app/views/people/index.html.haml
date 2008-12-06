@@ -1,20 +1,12 @@
 %h1 Listing people
 
-%table
+%table.DataList
   %tr
-    %th First name
-    %th Last name
+    %th.first Name
     %th Email
   - @people.each do |person|
-    %tr
-      %td= h person.first_name
-      %td= h person.last_name
+    %tr{:class => cycle('even','odd') }
+      %td.first= link_to "#{person.first_name} #{person.last_name}", object_url(person)
       %td= h person.email
         
-      %td= link_to 'Show', object_url(person)
-      %td= link_to 'Edit', edit_object_url(person)
-      %td= link_to 'Destroy', object_url(person), :confirm => 'Are you sure?', :method => :delete
-
-%br/
-
-=link_to 'New person', new_object_url
+%p=link_to 'New person', new_object_url
