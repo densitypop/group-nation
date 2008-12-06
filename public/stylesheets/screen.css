@@ -2,7 +2,7 @@
 
 body
 {
-  background:url(/images/bg.gif) repeat-x #feffd1;
+  background:#f9f9f9;
   text-align:center;
   font-family: Helvetica, Arial, "MS Trebuchet", sans-serif;
   font-size:67.5%;
@@ -50,8 +50,9 @@ h1
   color:#333;
   font-size:3em;
   line-height:1em;
-  border:1px solid #ababab;
+  border:1px solid #ddd;
   padding:15px 15px 8px 15px;
+  margin-bottom:20px;
 }
 
 h1 span
@@ -68,16 +69,53 @@ p
   line-height:1.5em;
 }
 
-table
+table.DataList
 {
   width:100%;
-  font-size:1.2em;
 }
 
-table th
+table.DataList th
 {
-  font-weight:bold;
-  border-bottom:1px solid #333;
+  font-size: 11px;
+  font-weight: bold;
+  color: #222;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  border-top: 1px solid #aaa;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 6px 6px 6px 12px;
+  background: #ccc;
+}
+
+table.DataList th.first
+{
+  border-left: 1px solid #aaa;
+}
+
+table.DataList tr td
+{
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #fff;
+	padding: 6px 6px 6px 12px;
+	color: #666;
+}
+
+table.DataList tr td.first
+{
+  border-left: 1px solid #ccc;
+}
+
+table.DataList tr td a
+{
+	color: #444;
+}
+
+table.DataList tr.odd td
+{
+	background: #efefef;
 }
 
 label
