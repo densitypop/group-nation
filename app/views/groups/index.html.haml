@@ -8,7 +8,7 @@
   - @groups.each do |group|
     %tr{:class => cycle('even','odd') }
       %td.first= link_to group.name, object_url(group)
-      %td= h "#{group.organizer.first_name} #{group.organizer.last_name}"
+      %td= link_to "#{group.organizer.first_name} #{group.organizer.last_name}", person_url(group.organizer)
       %td= h "#{group.city}, #{group.state}"
 
 %p.NewAction= link_to 'New group', new_object_url
