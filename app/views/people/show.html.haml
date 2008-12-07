@@ -1,13 +1,9 @@
-%p
-  %strong First name:
-  =h @person.first_name
-%p
-  %strong Last name:
-  =h @person.last_name
-%p
-  %strong Email:
-  =h @person.email
+%h1= "#{@person.first_name} #{@person.last_name}"
 
-= link_to 'Edit', edit_object_url
-|
-= link_to 'Back', collection_url
+%ul.DataList
+  %li 
+    %strong 
+      Email:
+    =h @person.email
+
+%p.Action= link_to 'Edit', edit_object_url

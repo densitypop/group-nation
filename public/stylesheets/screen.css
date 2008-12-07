@@ -118,14 +118,28 @@ table.DataList tr.odd td
 	background: #efefef;
 }
 
-p.NewAction
+ul.DataList li
+{
+  padding:4px;
+  border-bottom:1px dashed #ccc;
+}
+
+ul.DataList li strong
+{
+  font-weight:bold;
+  display:block;
+  float:left;
+  width:80px;
+}
+
+p.Action
 {
   font-size:18px;
   font-weight:bold;
   margin-top:15px;
 }
 
-p.NewAction a
+p.Action a
 {
   padding:6px;
   background:#ccc;
@@ -137,7 +151,7 @@ p.NewAction a
   border-left:1px solid #fff;
 }
 
-p.NewAction a:hover
+p.Action a:hover
 {
   background:#bbb;
   color:#000;

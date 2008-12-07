@@ -1,23 +1,9 @@
 %h1
   =h @group.name
-  %span &raquo; A tagline goes here
 
-%p
-  %strong Person:
-  =h @group.organizer_id
-%p
-  %strong City:
-  =h @group.city
-%p
-  %strong State:
-  =h @group.state
-%p
-  %strong Zip:
-  =h @group.zip
-%p
-  %strong Active:
-  =h @group.active
+%ul.DataList
+  %li
+    %strong Location:
+    = "#{@group.city}, #{@group.state} #{@group.zip}"
 
-= link_to 'Edit', edit_object_url
-|
-= link_to 'Back', collection_url
+%p.Action= link_to 'Edit', edit_object_url(@group.permalink)
