@@ -10,4 +10,5 @@
       %td.first= link_to group.name, object_url(group)
       %td= h "#{group.organizer.first_name} #{group.organizer.last_name}"
       %td= h "#{group.city}, #{group.state}"
-%p= link_to 'New group', new_object_url
+
+%p.NewAction= link_to 'New group', new_object_url

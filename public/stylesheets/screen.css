@@ -118,6 +118,31 @@ table.DataList tr.odd td
 	background: #efefef;
 }
 
+p.NewAction
+{
+  font-size:18px;
+  font-weight:bold;
+  margin-top:15px;
+}
+
+p.NewAction a
+{
+  padding:6px;
+  background:#ccc;
+  color:#333;
+  text-decoration:none;
+  border-right:1px solid #999;
+  border-bottom:1px solid #999;
+  border-top:1px solid #fff;
+  border-left:1px solid #fff;
+}
+
+p.NewAction a:hover
+{
+  background:#bbb;
+  color:#000;
+}
+
 label
 {
   display:block;
